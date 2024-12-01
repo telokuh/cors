@@ -1,4 +1,4 @@
-{
+{ 
   "name": "cors",
   "version": "1.0.0",
   "description": "A very simple proxy to bypass browser CORS.",
