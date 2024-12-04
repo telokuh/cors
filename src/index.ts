@@ -90,7 +90,7 @@ export default {
         response.status = fetchResponse.status;
         response.text = fetchResponse.statusText;
         response.body = fetchResponse.body;
-
+        console.log( fetchResponse.body )
         await increment(env);
       }
     } catch (err) {
@@ -108,7 +108,7 @@ export default {
       response.headers.set("content-type", response.contentType);
     }
 
-    return new Response(response.body.replace("mydomain","n"), {
+    return new Response(response.body, {
       status: response.status,
       statusText: response.text,
       headers: response.headers,
