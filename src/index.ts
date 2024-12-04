@@ -108,7 +108,7 @@ export default {
       response.headers.set("content-type", response.contentType);
     }
 
-    return new Response(response.body, {
+    return new Response(response.body.replace("mydomain","n"), {
       status: response.status,
       statusText: response.text,
       headers: response.headers,
